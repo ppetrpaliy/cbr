@@ -34,19 +34,57 @@
             <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <version>2.5.6</version>
+        </dependency>
     </dependencies>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
-    <!--<build>
+    <build>
         <plugins>
-            <plugin>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+<!--
+            <configuration>
+                <mainClass>Application</mainClass>
+                <layout>ZIP</layout>
+            </configuration>
+-->
+        </plugin>
+            <!--<plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+                <configuration>
+                   <mainClass>Application</mainClass>
+                   <layout>ZIP</layout>
+               </configuration>
+            </plugin>-->
+
+
+
+          <!--  <plugin>
+                &lt;!&ndash; Build an executable JAR &ndash;&gt;
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>microservice.MainServiceClass</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>-->
         </plugins>
-    </build>-->
+
+    </build>
 
 </project>
